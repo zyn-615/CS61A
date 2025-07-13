@@ -72,12 +72,9 @@ def largest_factor(n):
     while factor * factor <= n:
         if n % factor == 0:
             res = N // factor
-        while n % factor == 0:
-            n //= factor
+            break
         factor = factor + 1
     
-    if n < N:
-        res = max(res, n)
     return res
 
 def hailstone(n):
